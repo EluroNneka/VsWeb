@@ -4,14 +4,17 @@ import AuthService from '../utils/OidcService';
 import { User } from 'oidc-client';
 
 const Button = () => {
-  const { loginWithRedirect } = useAuth0();
-  return <button
+  const { isAuthenticated, loginWithRedirect } = useAuth0();
+  return 
+  { !isAuthenticated && (
+  <button
     onClick={ () => {
       loginWithRedirect()
     } }
   >
     Login
-  </button>;
+  </button>
+  );
 };
 
 export default Button;

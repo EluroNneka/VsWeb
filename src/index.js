@@ -21,6 +21,7 @@ ReactDOM.render(
       clientId= {IDENTITY_CONFIG.client_id}
       redirectUri= {IDENTITY_CONFIG.redirect_uri}
       scope= {IDENTITY_CONFIG.scope}
+      responseType= 'code'
       onRedirectCallback = 'https://id-sandbox.cashtoken.africa/oauth'
       
       
